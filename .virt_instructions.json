@@ -1,0 +1,242 @@
+[
+  {
+    "timestamp": "2026-01-20T16:33:54.670162+00:00",
+    "task_id": "adhoc_e63b4e4a",
+    "title": "Ad-hoc: Pystytä Nx-monorepo ja luo Next.js -sovellus nimel...",
+    "goal": "Pystytä Nx-monorepo ja luo Next.js -sovellus nimeltä 'portfolio'.\n1. Käytä 'nxcode init' komentoa luodaksesi Next.js -projektin.\n2. Määrittele Tailwind CSS teema (Slate/Zinc, Dark mode oletuksena).\n3. Luo kansio 'apps/portfolio/src/content/' ja sinne tiedosto 'portfolio.ts', joka sisältää monikielisen datarakenteen (Hero, About, Experience, Projects, Skills) suomeksi ja englanniksi.\n4. Luo TypeScript-tyypit ('apps/portfolio/src/types/portfolio.ts') sisällölle.\n5. Toteuta API-reitti ('apps/portfolio/src/app/api/contact/route.ts') lomakkeen käsittelyyn.\n6. Asenna tarvittavat kirjastot: framer-motion, lucide-react, clsx, tailwind-merge.",
+    "context": "Moderni portfolio-sivusto Martti Prittiselle.\n- Tekniikka: Nx Monorepo, Next.js (App Router), Tailwind CSS, Framer Motion, TypeScript.\n- Teema: Tumma ja minimalistinen (Slate/Zinc).\n- Rakennetyyppi: Single-page smooth scroll + kielenvaihto.\n- Data-driven: Kaikki sisältö src/content/portfolio.ts.\n- Osiot: Hero, About, Experience, Projects, Skills, Contact, Footer.\n- Vaatimukset: Monikielisyys (FI/EN).",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T16:41:56.391581+00:00",
+    "task_id": "adhoc_b11ff051",
+    "title": "Ad-hoc: Toteuta portfolion k\\u00e4ytt\\u00f6liittym\\u00e4:\n...",
+    "goal": "Toteuta portfolion k\\u00e4ytt\\u00f6liittym\\u00e4:\n1. Luo komponentit ('apps/portfolio/src/components/'):\n   - Navbar: Sticky, smooth scroll linkit, kielenvaihdin (FI/EN).\n   - Hero: Moderni typografia, rooli, CTA-napit.\n   - About: Biografia.\n   - Experience: Ty\\u00f6kokemus-aikajana.\n   - Projects: Korttin\\u00e4kym\\u00e4 (Demo/GitHub linkit).\n   - Skills: Kategorisoidut taidot.\n   - Contact: Validoitu lomake + sosiaaliset linkit.\n   - Footer: Tekij\\u00e4oikeudet ja pikkulinkit.\n2. P\\u00e4ivit\\u00e4 'apps/portfolio/src/app/page.tsx' k\\u00e4ytt\\u00e4m\\u00e4\\u00e4n n\\u00e4it\\u00e4 komponentteja ja hallitsemaan kielitilaa (useState/context).\n3. Lis\\u00e4\\u00e4 Framer Motion animaatiot (esim. Staggered fade-in osioille).\n4. Lis\\u00e4\\u00e4 Metadata (SEO) 'apps/portfolio/src/app/layout.tsx' tiedostoon.\n5. K\\u00e4ynnist\\u00e4 kehityspalvelin: 'npm run dev -- --hostname 0.0.0.0' ja rekister\\u00f6i esikatselu (portti 3000).",
+    "context": "Nx-monorepo ja Next.js -sovellus 'portfolio' on pystytetty.\n- Sisältödata on 'apps/portfolio/src/content/portfolio.ts'.\n- Teemana Slate/Zinc (dark mode oletuksena).\n- Käytössä Framer Motion ja Lucide React.\n- Kansiorakenne: apps/portfolio/src/...\n- Komponentit tulevat kansioon apps/portfolio/src/components/.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T16:54:57.843972+00:00",
+    "task_id": "adhoc_1ee36b40",
+    "title": "Ad-hoc: Tarkista dev-palvelimen tila:\n1. Katso lokitiedost...",
+    "goal": "Tarkista dev-palvelimen tila:\n1. Katso lokitiedosto `/tmp/portfolio-dev.log`.\n2. Tarkista onko portti 3000 kuuntelussa (`netstat -tuln`).\n3. Jos palvelin ei ole käynnissä, käynnistä se uudelleen oikeasta kansiosta tai juuresta varmistaen, että se pysyy käynnissä.\n4. Varmista, että esikatselu on rekisteröity oikein.",
+    "context": "Käyttäjä raportoi \"Host Error\" esikatselussa. \nDev-palvelin käynnistettiin aiemmin taustalle (`npm run dev -- --hostname 0.0.0.0 > /tmp/portfolio-dev.log 2>&1 &`).\nTodennäköisesti palvelin on sammunut tai siinä on virhe.\nNx-monorepo rakenne: apps/portfolio/ sisältää Next.js sovelluksen.\nJuuren package.json sisältää skriptit.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:02:57.039753+00:00",
+    "task_id": "adhoc_f81297f2",
+    "title": "Ad-hoc: Korjaa moduulien polkuvirheet:\n1. Tarkista `tsconf...",
+    "goal": "Korjaa moduulien polkuvirheet:\n1. Tarkista `tsconfig.json` juuresta ja `apps/portfolio/tsconfig.json`. Varmista, että `\"paths\": { \"@/*\": [\"./apps/portfolio/src/*\"] }` tai vastaava on asetettu oikein.\n2. Tarkista `apps/portfolio/src/app/page.tsx` ja varmista, että importit vastaavat nykyistä rakennetta.\n3. Varmista, että kaikki komponenttitiedostot (About.tsx, Contact.tsx, jne.) todella sijaitsevat kansiossa `apps/portfolio/src/components/`.\n4. Käynnistä dev-palvelin uudelleen muutosten jälkeen.",
+    "context": "Next.js sovellus on siirretty kansioon `apps/portfolio/`. \nVirheilmoitus `Can't resolve '@/components/About'` viittaa siihen, että TypeScript-polkualiakset (@/*) tai Next.js:n asetukset eivät osoita oikeaan paikkaan monorepo-rakenteessa. \nAiemmin tehtiin siirto `mv src apps/portfolio/`, mikä saattaa rikkoa oletusasetukset, jos `tsconfig.json` tai `next.config.ts` ei ole ajan tasalla.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:18:28.862453+00:00",
+    "task_id": "adhoc_1f936ed7",
+    "title": "Ad-hoc: Puhdista ja käynnistä dev-palvelin vakaasti:\n1. Ta...",
+    "goal": "Puhdista ja käynnistä dev-palvelin vakaasti:\n1. Tapa kaikki käynnissä olevat node-prosessit (`pkill -9 node`).\n2. Mene kansioon `apps/portfolio`.\n3. Käynnistä Next.js dev-palvelin pakotetusti porttiin 3000: `npx next dev --port 3000 --hostname 0.0.0.0`. Aja tämä taustalla.\n4. Odota hetki, että palvelin on ylhäällä.\n5. Rekisteröi esikatselu uudelleen: `nxcode report-preview --port 3000 --framework next`.\n6. Tarkista `/tmp/next-debug.log` mahdollisten virheiden varalta.",
+    "context": "Käyttäjä raportoi edelleen \"Host Error\" esikatselussa.\nAiempien yritysten perusteella:\n1. Portti 5173 oli käytössä, mutta esikatselu saattoi viitata porttiin 3000.\n2. Next.js on `apps/portfolio` -kansiossa.\n3. Dev-palvelin saattaa kaatua tai portti vaihtua.\n4. Nx-monorepo rakenne aiheuttaa hämmennystä polkujen kanssa.\n\nTavoite: Varmistaa, että dev-palvelin on käynnissä vakaasti portissa 3000 (standardi) ja esikatselu osoittaa siihen.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:19:31.977856+00:00",
+    "task_id": "adhoc_9bf3399f",
+    "title": "Ad-hoc: 1. Tarkista mitkä portit ovat varattuja: `ss -tulp...",
+    "goal": "1. Tarkista mitkä portit ovat varattuja: `ss -tulpn`.\n2. Jos portti 3000 tai 5173 on varattu, tapa ne prosessi-id:n perusteella.\n3. Siirry `apps/portfolio` kansioon.\n4. Käynnistä Next.js taustalle: `PORT=3000 npx next dev --hostname 0.0.0.0 > /tmp/next.log 2>&1 &`.\n5. Odota 5 sekuntia ja tarkista `cat /tmp/next.log`.\n6. Rekisteröi esikatselu: `nxcode report-preview --port 3000 --framework next`.",
+    "context": "Edellinen yritys epäonnistui (code -9), todennäköisesti muistin tai resurssien vuoksi `pkill node` -komennon yhteydessä.\nYritetään käynnistää palvelin hallitummin. Next.js on `apps/portfolio` -kansiossa.\nPortti 3000 on tavoite.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:20:08.754945+00:00",
+    "task_id": "adhoc_428edd31",
+    "title": "Ad-hoc: 1. Siirry kansioon `/workspace/portfolio/apps/port...",
+    "goal": "1. Siirry kansioon `/workspace/portfolio/apps/portfolio`.\n2. Varmista, että siellä on `src/app` kansio.\n3. Käynnistä palvelin TÄSTÄ kansiosta: `PORT=3000 npx next dev --hostname 0.0.0.0 > /tmp/next-correct.log 2>&1 &`.\n4. Odota 10 sekuntia (Next.js kääntäminen vie aikaa).\n5. Tarkista `cat /tmp/next-correct.log`.\n6. Rekisteröi esikatselu uudelleen porttiin 3000.",
+    "context": "Next.js dev-palvelin valittaa, ettei löydä `app` tai `pages` kansiota, koska se käynnistettiin juuresta. \nTodellinen sovellus on `apps/portfolio/src/app` -kansiossa.\nVarmistetaan polut ja käynnistetään oikeasta paikasta.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:27:53.794166+00:00",
+    "task_id": "adhoc_651614ab",
+    "title": "Ad-hoc: Korjaa Tailwind CSS -konfiguraatiovirhe:\n1. Asenna...",
+    "goal": "Korjaa Tailwind CSS -konfiguraatiovirhe:\n1. Asenna `@tailwindcss/postcss` paketti: `npm install @tailwindcss/postcss`.\n2. Päivitä `postcss.config.js` (sekä juuresta että sovelluskansiosta) käyttämään uutta pluginia: `plugins: { '@tailwindcss/postcss': {}, autoprefixer: {} }`.\n3. Varmista, että `apps/portfolio/src/app/globals.css` sisältää oikeat `@theme` tai `@tailwind` direktiivit Tailwind 4:lle (käytetään `@tailwind base; @tailwind components; @tailwind utilities;` jos ei käytetä uutta CSS-pohjaista konffia).\n4. Käynnistä dev-palvelin uudelleen `apps/portfolio` -kansiossa porttiin 3000.",
+    "context": "Next.js 15 ja Tailwind CSS 4+ versioiden välillä on tullut muutos, jossa `tailwindcss` ei enää toimi suoraan PostCSS-pluginina, vaan vaatii `@tailwindcss/postcss` paketin. Tämä aiheuttaa \"Build Error\" ilmoituksen esikatselussa.\nSovellus on `apps/portfolio` -kansiossa.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:33:24.144233+00:00",
+    "task_id": "adhoc_f0eaea08",
+    "title": "Ad-hoc: Päivitä juuren `package.json` skriptit:\n1. Muuta `...",
+    "goal": "Päivitä juuren `package.json` skriptit:\n1. Muuta `\"dev\": \"next dev apps/portfolio\"` muotoon `\"dev\": \"next dev apps/portfolio --port 3000\"`.\n2. Varmista, että muut skriptit (build, start) viittaavat oikeaan kansioon.\n3. Tapa nykyinen dev-prosessit ja käynnistä palvelin uudelleen uudella skriptillä taustalle.\n4. Rekisteröi esikatselu porttiin 3000.",
+    "context": "Käyttäjä valitsi vaihtoehdon 1: \"align the root npm run dev script to port 3000\".\nJuuren package.json tiedostossa oleva dev-skripti pitää päivittää käyttämään porttia 3000, jotta se vastaa esikatselun asetuksia ja vältytään porttiristiriidoilta jatkossa.\nNext.js on kansiossa `apps/portfolio/`.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:39:10.062987+00:00",
+    "task_id": "adhoc_e9d7b418",
+    "title": "Ad-hoc: Syväanalyysi ja lopullinen korjaus:\n1. Listaa kaik...",
+    "goal": "Syväanalyysi ja lopullinen korjaus:\n1. Listaa kaikki prosessit, jotka kuuntelevat portteja: `ss -tulpn`.\n2. Jos jokin muu kuin `node` kuuntelee porttia 3000, tapa se.\n3. Tarkista `/tmp/portfolio-dev.log` ja `/tmp/next-correct.log` viimeisimmät rivit.\n4. Varmista, että sovellus on todella kansiossa `apps/portfolio` ja siellä on `package.json`.\n5. Käynnistä palvelin SUORAAN ja NÄKYVÄSTI: `cd apps/portfolio && PORT=3000 npx next dev --hostname 0.0.0.0` (ilman tausta-ajoa aluksi, jotta näemme välittömän virheen, sitten taustalle kun toimii).\n6. Jos Next.js valittaa puuttuvista tiedostoista, korjaa polut.\n7. Rekisteröi esikatselu uudelleen porttiin 3000.",
+    "context": "Käyttäjä raportoi edelleen \"Host Error\" esikatselussa, vaikka palvelimen pitäisi olla pystyssä portissa 3000.\nTämä viittaa siihen, että prosessi on joko kaatunut käynnistyksen jälkeen, se ei kuuntele kaikilla rajapinnoilla (0.0.0.0), tai portti on varattu jollekin muulle.\nKäytössä on Nx-monorepo ja sovellus on kansiossa `apps/portfolio`.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:45:04.239202+00:00",
+    "task_id": "adhoc_11a71e8d",
+    "title": "Ad-hoc: Korjaa Tailwind CSS -virheet:\n1. Tarkista tiedosto...",
+    "goal": "Korjaa Tailwind CSS -virheet:\n1. Tarkista tiedosto `apps/portfolio/src/app/globals.css`.\n2. Jos siellä on luokkia kuten `bg-background` tai `text-foreground` joita ei ole määritelty, korvaa ne vakioväreillä (esim. `bg-slate-950`, `text-zinc-100`) tai määrittele ne `:root` lohkossa.\n3. Tailwind v4:ssä käytä `@import \"tailwindcss\";` jos perinteiset `@tailwind` direktiivit aiheuttavat ongelmia uuden pluginin kanssa.\n4. Tarkista `apps/portfolio/src/app/layout.tsx` ja varmista, ettei siellä käytetä olemattomia luokkia `body`-tagissa.\n5. Käynnistä palvelin uudelleen.",
+    "context": "Tailwind CSS v4 (tai uudempi) heittää virheen tuntemattomasta `bg-background` luokasta. \nTämä johtuu siitä, että Tailwind v4:ssä CSS-muuttujat ja teemamääritykset on määriteltävä CSS:ssä tai `@theme` lohkossa, jos niitä käytetään `@apply` direktiivillä, tai ne on poistettava jos niitä ei ole määritelty.\nAiemmin tehty `tailwind.config.ts` ei välttämättä ole täysin synkronoitu uuden PostCSS-pluginin kanssa v4-ympäristössä.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:48:30.012540+00:00",
+    "task_id": "adhoc_63d79ebd",
+    "title": "Ad-hoc: Päivitä 'apps/portfolio/src/content/portfolio.ts' ...",
+    "goal": "Päivitä 'apps/portfolio/src/content/portfolio.ts' tiedosto käyttäjän antamilla LinkedIn-tiedoilla:\n1. Hero: Nimi 'Martti Prittinen', titteli 'ICT Engineering Student | C++ & Web Development', sijainti 'Oulu, Finland'.\n2. About: Käytä LinkedInin 'About' tekstin suomennosta ja englanninkielistä versiota. Lisää maininta trainee-paikkojen hakemisesta.\n3. Experience: Lisää Oulun Golf, Martela Group ja Kalajoki Golf työkokemukset kuvauksineen.\n4. Skills: Päivitä taidot (C++, HTML/CSS, JavaScript, SQL, Git, REST APIs).\n5. Projects: Pidä placeholder-projektit, mutta päivitä teknologiat vastaamaan Martun osaamista (esim. C++ työkaluja, Web-sovelluksia).\n6. Varmista, että monikielisyys (fi/en) säilyy.",
+    "context": "Käyttäjä haluaa päivittää portfolion sisällön vastaamaan LinkedIn-profiiliaan.\nTiedot: Martti Prittinen, 3. vuoden ICT-insinööriopiskelija (OAMK).\nErikoistuminen: C++, Web Development, SQL, Git.\nTyökokemus: Oulun Golf, Martela Group, Kalajoki Golf.\nStatus: #OPEN_TO_WORK, hakee Trainee/Junior-rooleja.\nTiedosto: apps/portfolio/src/content/portfolio.ts.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:53:19.122966+00:00",
+    "task_id": "adhoc_dd79a0e7",
+    "title": "Ad-hoc: Päivitä 'apps/portfolio/src/content/portfolio.ts' ...",
+    "goal": "Päivitä 'apps/portfolio/src/content/portfolio.ts' tiedosto:\n1. Päivitä LinkedIn- ja GitHub-linkit sekä sähköpostiosoite (sekä fi että en osioihin).\n2. Tarkista 'Experience' osio: Varmista, että nimikkeet ovat 'Golf Course Maintenance Worker' (Kentänhoitaja) ja 'Mover / Relocation Worker' (Muuttotyöntekijä) LinkedInin mukaisesti.\n3. Varmista, että sähköposti päivittyy myös 'Contact' osion sähköpostiksi.\n4. Tarkista, että sosiaalisen median linkit alatunnisteessa (Footer/Links) ovat oikein.",
+    "context": "Käyttäjä haluaa päivittää yhteystiedot (LinkedIn, GitHub, Gmail) ja korjata työkokemuksen nimikkeet vastaamaan LinkedIn-profiilia (\"Golf Course Maintenance Worker\" eikä asiakaspalvelija).\nTiedot:\n- LinkedIn: https://www.linkedin.com/in/martti-prittinen-404a95336/\n- GitHub: https://github.com/MarttiPrittinen\n- Email: martti.prittinen@gmail.com\nTiedosto: apps/portfolio/src/content/portfolio.ts.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T17:56:19.212143+00:00",
+    "task_id": "adhoc_85aab035",
+    "title": "Ad-hoc: 1. Palauta taidot tiedostoon 'apps/portfolio/src/c...",
+    "goal": "1. Palauta taidot tiedostoon 'apps/portfolio/src/content/portfolio.ts' (C++, Git, HTML/CSS, JavaScript, SQL, REST APIs).\n2. Päivitä 'Hero.tsx' näyttämään kuva '/workspace/public/uploads/CVKUVA_atc_990f8988.jpg'. Lisää kuva tekstin rinnalle tyylikkäästi (esim. pyöreä tai pyöristetty neliö).\n3. Päivitä 'Projects.tsx' hakemaan data GitHub API:sta: 'https://api.github.com/users/MarttiPrittinen/repos?sort=updated&per_page=6'.\n   - Käytä useEffectia ja useStatea datan hakuun.\n   - Näytä projektin nimi, kuvaus, kieli (stack) ja linkki GitHubiin.\n   - Huomioi monikielisyys otsikoissa.\n4. Varmista, että kaikki toimii ja CSS on kunnossa.",
+    "context": "Käyttäjä haluaa:\n1. Palauttaa kadonneet taidot (Skills).\n2. Lisätä profiilikuvan (/workspace/public/uploads/CVKUVA_atc_990f8988.jpg) Hero-osioon.\n3. Muuttaa Projects-osion hakemaan projektit dynaamisesti GitHub API:sta (käyttäjä: MarttiPrittinen).\nTekniikka: Next.js, Tailwind, Framer Motion.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T18:03:15.289806+00:00",
+    "task_id": "adhoc_22dae947",
+    "title": "Ad-hoc: Päivitä 'apps/portfolio/src/components/Skills.tsx'...",
+    "goal": "Päivitä 'apps/portfolio/src/components/Skills.tsx':\n1. Tuo tarvittavat ikonit Lucide-reactista (esim. Code2, Terminal, Cpu, Layout, Database).\n2. Luo jokaiselle taitoryhmälle (tai kaikille taidoille yhteinen) tyylikäs kortti, jossa on:\n   - Taustana 'bg-white/5' tai 'bg-slate-900/50'.\n   - 'backdrop-blur-sm' efekti.\n   - Pyöristetyt kulmat ('rounded-2xl' tai 'rounded-3xl').\n   - Hienovarainen reunus ('border border-white/10').\n3. Asettele taidot 'pills' tyylillä laatikon sisään.\n4. Lisää Framer Motionilla pieni 'whileHover' skaalaus ja kirkkaus-efekti.\n5. Varmista, että asettelu on responsiivinen (grid-cols-1 md:grid-cols-3).",
+    "context": "Käyttäjä haluaa parantaa Skills-osion ulkoasua: vähemmän 'tönkkö' ja tyhjä.\nLisätään visuaaliset laatikot, ikonit (Lucide-react) ja parempi asettelu.\nTiedosto: apps/portfolio/src/components/Skills.tsx.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  },
+  {
+    "timestamp": "2026-01-20T18:07:19.964829+00:00",
+    "task_id": "adhoc_ac866560",
+    "title": "Ad-hoc: 1. Päivitä 'Hero.tsx': Säädä kuvan 'img'-tagia tai...",
+    "goal": "1. Päivitä 'Hero.tsx': Säädä kuvan 'img'-tagia tai konttia: lisää 'object-top' tai 'object-[center_20%]' ja varmista, että 'aspect-ratio' ja rajaus näyttävät Martun kasvot paremmin ylhäältä.\n2. Päivitä 'Skills.tsx':\n   - Lisää korteille 'group' luokka ja hienovarainen 'group-hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]' hohto.\n   - Muuta taitopillerit ('pills') käyttämään 'bg-white/10' taustaa ja lisää niihin pieni siirtymäanimaatio.\n   - Lisää kategoriotsikoiden alle ohut gradientti-viiva korostukseksi.\n   - Varmista, että Lucide-ikonit ovat hieman suurempia ja niissä on kategorian väri (esim. cyan).",
+    "context": "Käyttäjä haluaa:\n1. Rajata selfietä ylemmäs Hero-osiossa.\n2. Parantaa Skills-osion ulkoasua entisestään (enemmän visuaalista 'wow'-efektiä).\nTekniikka: Tailwind CSS, Framer Motion.",
+    "steps": [],
+    "acceptance_criteria": [
+      {
+        "description": "Complete the requested task",
+        "verification_method": null
+      }
+    ],
+    "thread_id": "thr_a8cb4f93"
+  }
+]

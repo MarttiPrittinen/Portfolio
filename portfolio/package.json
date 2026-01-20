@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev apps/portfolio --port 3000",
+    "build": "next build apps/portfolio",
+    "start": "next start apps/portfolio",
+    "lint": "next lint",
+    "deploy": "npx @opennextjs/cloudflare"
+  },
+  "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.0",
+    "@tailwindcss/postcss": "^4.1.18",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.27.5",
+    "lucide-react": "^0.562.0",
+    "next": "^15.1.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tailwind-merge": "^3.4.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241112.0",
+    "@opennextjs/cloudflare": "^0.5.0",
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.6.3",
+    "wrangler": "^3.91.0"
+  }
+}
