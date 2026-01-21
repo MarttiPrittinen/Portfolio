@@ -8,7 +8,7 @@ import { Footer } from '@/components/Footer'
 import { Hero } from '@/components/Hero'
 import { Navbar } from '@/components/Navbar'
 import { Projects } from '@/components/Projects'
-import { Skills } from '@/components/Skills'
+import Skills from '@/components/Skills'
 import { portfolioContent } from '@/content/portfolio'
 import type { Locale } from '@/types/portfolio'
 
@@ -31,7 +31,7 @@ export default function Home() {
         items={content.projects.items}
         locale={locale}
       />
-      <Skills title={content.skills.title} groups={content.skills.groups} />
+      <Skills />
       <Contact locale={locale} content={content.contact} socialLinks={content.footer.links} />
       <Footer content={content.footer} />
     </main>

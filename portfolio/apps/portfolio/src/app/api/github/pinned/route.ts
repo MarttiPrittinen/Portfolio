@@ -36,8 +36,9 @@ export async function GET() {
       "User-Agent": "portfolio-app",
     },
     body: JSON.stringify({ query }),
-    next: { revalidate: 3600 },
+    cache: "no-store",
   });
+  
 
   if (!res.ok) {
     const text = await res.text();

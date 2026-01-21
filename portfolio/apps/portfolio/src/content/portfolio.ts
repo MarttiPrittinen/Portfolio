@@ -31,7 +31,7 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           role: 'Kentänhoitaja',
           company: 'Oulun Golf',
           period: 'Kausityö',
-          location: 'Oulu',
+          location: 'Oulu • 2024-2025',
           summary: [
             'Osallistuin golfkentän päivittäiseen kunnossapitoon (viheriöt, väylät, bunkkerit ja yleiset alueet).',
             'Käytin ja huolsin työvälineitä sekä koneita, ja huolehdin kentän siisteydestä ja pelattavuudesta.'
@@ -42,7 +42,7 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           role: 'Muuttotyöntekijä',
           company: 'Martela Group',
           period: 'Trainee',
-          location: 'Oulu',
+          location: 'Oulu • 2024-2025',
           summary: [
             'Työskentelin muuttotyöntekijänä: kanto, kuormaus ja purku sekä tavaroiden suojaus ja pakkaus.',
             'Kokosin ja purin kalusteita, huolehdin työskentelyn turvallisuudesta ja tein asiakaskohteissa työtä aikataulujen mukaan.'
@@ -53,7 +53,7 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           role: 'Kentänhoitaja',
           company: 'Kalajoki Golf',
           period: 'Kausityö',
-          location: 'Kalajoki',
+          location: 'Kalajoki • 2020-2023',
           summary: [
             'Huolehdin golfkentän kunnossapidosta ja siisteydestä sesongin aikana.',
             'Avustin kentänhoidon päivittäisissä tehtävissä ja tuessa kilpailu- ja tapahtumapäivinä.'
@@ -148,7 +148,7 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           role: 'Golf Course Maintenance Worker',
           company: 'Oulun Golf',
           period: 'Seasonal',
-          location: 'Oulu',
+          location: 'Oulu • 2024-2025',
           summary: [
             'Worked on daily golf course maintenance (greens, fairways, bunkers, and surrounding areas).',
             'Operated and maintained tools and equipment, ensuring the course remained clean and playable.'
@@ -159,7 +159,7 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           role: 'Mover / Relocation Worker',
           company: 'Martela Group',
           period: 'Trainee',
-          location: 'Oulu',
+          location: 'Oulu • 2024-2025',
           summary: [
             'Worked as a mover: loading/unloading, carrying, packing, and protecting items during transport.',
             'Assembled and disassembled furniture, followed safety procedures, and worked to tight schedules at customer sites.'
@@ -170,7 +170,7 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           role: 'Golf Course Maintenance Worker',
           company: 'Kalajoki Golf',
           period: 'Seasonal',
-          location: 'Kalajoki',
+          location: 'Kalajoki • 2020-2023',
           summary: [
             'Supported seasonal golf course upkeep and ensured the course stayed in great condition.',
             'Assisted with day-to-day maintenance tasks and provided extra support during events and competitions.'
