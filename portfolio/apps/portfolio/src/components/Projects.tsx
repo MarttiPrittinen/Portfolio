@@ -48,7 +48,7 @@ export function Projects({ title, items, locale }: ProjectsProps) {
     }),
     [locale]
   )
-  const [projects, setProjects] = useState<ProjectItem[]>(items)
+  const [projects, setProjects] = useState<ProjectItem[]>([])
   const [status, setStatus] = useState<'loading' | 'success' | 'error'>('loading')
 
   useEffect(() => {
@@ -58,41 +58,33 @@ export function Projects({ title, items, locale }: ProjectsProps) {
     const fetchProjects = async () => {
       setStatus('loading')
       try {
-        const response = await fetch(
-          'https://api.github.com/users/MarttiPrittinen/repos?sort=updated&per_page=6',
-          { signal: controller.signal }
-        )
-
+        const response = await fetch('/api/github/pinned', { signal: controller.signal })
         if (!response.ok) {
           throw new Error('GitHub fetch failed')
         }
 
         const repos = (await response.json()) as Array<{
-          id: number
+          id: string
           name: string
           description: string | null
-          language: string | null
-          html_url: string
+          url: string
+          primaryLanguage: { name: string } | null
         }>
-
-        if (!isActive) {
-          return
-        }
-
+        
         const mapped = repos.map(repo => ({
           name: repo.name,
           description: repo.description ?? labels.noDescription,
-          stack: [repo.language ?? labels.unknownLanguage],
-          links: [{ label: labels.github, href: repo.html_url }]
+          stack: [repo.primaryLanguage?.name ?? labels.unknownLanguage],
+          links: [{ label: labels.github, href: repo.url }]
         }))
-
-        setProjects(mapped.length ? mapped : items)
+      
+        setProjects(mapped)
         setStatus('success')
       } catch (error) {
         if (!isActive) {
           return
         }
-        setProjects(items)
+        setProjects([])
         setStatus('error')
       }
     }

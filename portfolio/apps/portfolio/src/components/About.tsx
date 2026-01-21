@@ -23,6 +23,9 @@ type AboutProps = {
 }
 
 export function About({ content, locale }: AboutProps) {
+  if (!content) {
+    return null
+  }
   const highlightLabel = locale === 'fi' ? 'Nostot' : 'Highlights'
 
   return (

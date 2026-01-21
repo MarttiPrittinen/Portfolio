@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <Navbar locale={locale} onLocaleChange={setLocale} name={content.hero.name} />
       <Hero content={content.hero} />
-      <About content={content.about} locale={locale} />
+      <About content={portfolioContent[locale].about} locale={locale} />
       <Experience title={content.experience.title} items={content.experience.items} />
       <Projects
         title={content.projects.title}

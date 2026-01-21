@@ -4,25 +4,26 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
   fi: {
     hero: {
       name: 'Martti Prittinen',
-      title: 'ICT Engineering Student | C++ & Web Development',
-      subtitle: 'Rakennan selkeitä ja käytännönläheisiä ratkaisuja opiskelun ja työn kautta.',
+      title: 'ICT-insinööriopiskelija | Ohjelmistokehittäjä',
+      subtitle: 'Rakennan selkeitä ja käytännönläheisiä ohjelmistoratkaisuja.',
       location: 'Oulu, Finland',
       ctaPrimary: { label: 'Ota yhteyttä', href: '#contact' },
       ctaSecondary: { label: 'Katso projektit', href: '#projects' }
     },
     about: {
       title: 'Taustaa',
-      lead: 'Olen 3. vuoden ICT-insinööriopiskelija OAMK:ssa ja etsin trainee- tai junior-roolia.',
+      lead: 'Olen 3. vuoden ICT-insinööriopiskelija OAMK:ssa ja etsin trainee- tai junior-roolia ohjelmistokehityksen parissa.',
       paragraphs: [
-        'Minua kiinnostavat erityisesti C++-kehitys ja web-sovellusten toteutus. Opintojen ohella rakennan projekteja, joissa yhdistyvät käytännönläheisyys, hyvä käyttökokemus ja selkeä koodi.',
-        'Olen #OPEN_TO_WORK ja haen trainee- tai junior-rooleja, joissa pääsen kehittymään tiimissä ja tuomaan osaamiseni hyötykäyttöön.'
+        'Minua kiinnostavat erityisesti ohjelmistojen taustalogiikka, web-sovellusten toteutus sekä tekoälyyn liittyvät ratkaisut. Opintojen ohella rakennan projekteja, joissa keskityn selkeisiin kokonaisuuksiin, toimivaan rakenteeseen ja helposti ylläpidettävään koodiin.',
+        'Haen roolia, jossa pääsen oppimaan lisää käytännön kehitystyöstä, työskentelemään osana tiimiä ja soveltamaan osaamistani oikeisiin projekteihin. Arvostan ympäristöä, jossa tekeminen on huolellista ja jatkuva kehittyminen on luonteva osa työtä.'
       ],
       highlights: [
         'C++-ohjelmointi ja ongelmanratkaisu',
         'Web-kehitys (HTML, CSS, JavaScript)',
-        'SQL-tietokannat ja REST-rajapinnat'
+        'SQL-tietokannat ja REST-rajapinnat',
+        'Kiinnostus tekoälyyn ja dataan'
       ]
-    },
+    },    
     experience: {
       title: 'Kokemus',
       items: [
@@ -32,10 +33,10 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           period: 'Kausityö',
           location: 'Oulu',
           summary: [
-            'Palvelin asiakkaita ja huolehdin sujuvasta asiakaskokemuksesta klubitalolla.',
-            'Käytin varaus- ja kassajärjestelmiä sekä toiminnan päivittäistä koordinointia.'
+            'Osallistuin golfkentän päivittäiseen kunnossapitoon (viheriöt, väylät, bunkkerit ja yleiset alueet).',
+            'Käytin ja huolsin työvälineitä sekä koneita, ja huolehdin kentän siisteydestä ja pelattavuudesta.'
           ],
-          technologies: ['Asiakaspalvelu', 'Varausjärjestelmät', 'Tiimityö']
+          technologies: ['Kentänhoito', 'Kunnossapito', 'Tiimityö']          
         },
         {
           role: 'Muuttotyöntekijä',
@@ -43,10 +44,10 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           period: 'Trainee',
           location: 'Oulu',
           summary: [
-            'Osallistuin tuotannon ja logistiikan käytännön tehtäviin sekä laadun varmistamiseen.',
-            'Opettelin prosessien sujuvoittamista ja tiimityön merkitystä arjessa.'
+            'Työskentelin muuttotyöntekijänä: kanto, kuormaus ja purku sekä tavaroiden suojaus ja pakkaus.',
+            'Kokosin ja purin kalusteita, huolehdin työskentelyn turvallisuudesta ja tein asiakaskohteissa työtä aikataulujen mukaan.'
           ],
-          technologies: ['Prosessit', 'Laatu', 'Tiimityö']
+          technologies: ['Muuttotyö', 'Kalustekasaus', 'Työturvallisuus', 'Tiimityö']          
         },
         {
           role: 'Kentänhoitaja',
@@ -54,39 +55,16 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           period: 'Kausityö',
           location: 'Kalajoki',
           summary: [
-            'Huolehdin asiakaspalvelusta ja päivittäisestä toiminnasta kenttäympäristössä.',
-            'Tuin tapahtumien ja kilpailujen järjestelyjä kiireisinä sesonkeina.'
+            'Huolehdin golfkentän kunnossapidosta ja siisteydestä sesongin aikana.',
+            'Avustin kentänhoidon päivittäisissä tehtävissä ja tuessa kilpailu- ja tapahtumapäivinä.'
           ],
-          technologies: ['Asiakaspalvelu', 'Tapahtumat', 'Yhteistyö']
+          technologies: ['Kentänhoito', 'Kunnossapito', 'Yhteistyö']          
         }
       ]
     },
     projects: {
       title: 'Projektit',
-      items: [
-        {
-          name: 'Aurora Dashboard',
-          description: 'Reaaliaikainen KPI-näkymä teknologia-startupille.',
-          stack: ['JavaScript', 'HTML/CSS', 'REST APIs'],
-          links: [
-            { label: 'Case study', href: '#' },
-            { label: 'GitHub', href: '#' }
-          ],
-          featured: true
-        },
-        {
-          name: 'Nordic Notes',
-          description: 'Minimalistinen muistiinpanoalusta vahvalla synkronoinnilla.',
-          stack: ['JavaScript', 'SQL', 'REST APIs'],
-          links: [{ label: 'Live', href: '#' }]
-        },
-        {
-          name: 'Signal Brand Site',
-          description: 'Brändisivusto, jossa animaatiot ohjaavat tarinankerrontaa.',
-          stack: ['HTML/CSS', 'JavaScript', 'Git'],
-          links: [{ label: 'Live', href: '#' }]
-        }
-      ]
+      items: []
     },
     skills: {
       title: 'Taidot',
@@ -133,7 +111,7 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
   en: {
     hero: {
       name: 'Martti Prittinen',
-      title: 'ICT Engineering Student | C++ & Web Development',
+      title: 'ICT Engineering Student | Software Developer',
       subtitle: 'I build clear, practical solutions through studies and hands-on work.',
       location: 'Oulu, Finland',
       ctaPrimary: { label: 'Get in touch', href: '#contact' },
@@ -141,17 +119,28 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
     },
     about: {
       title: 'About',
-      lead: 'I am a 3rd-year ICT engineering student at OAMK, looking for trainee or junior roles.',
+      lead: 'I am a third-year ICT engineering student at Oulu University of Applied Sciences, seeking an internship or junior role in software development.',
       paragraphs: [
-        'I focus on C++ development and web applications. Alongside my studies, I build projects that combine practical value, solid UX, and clean code.',
-        'I am #OPEN_TO_WORK and actively seeking trainee or junior opportunities where I can grow with a team and contribute from day one.'
+        'I am particularly interested in backend logic, web application development, and AI-related solutions. Alongside my studies, I build projects that focus on clear structure, solid functionality, and maintainable code.',
+        'I am looking for a role where I can continue learning through real development work, collaborate as part of a team, and apply my skills to real-world projects. I value careful engineering and environments that support continuous improvement.'
       ],
       highlights: [
         'C++ programming and problem solving',
         'Web development (HTML, CSS, JavaScript)',
-        'SQL databases and REST APIs'
+        'SQL databases and REST APIs',
+        'Interest in AI and data-driven solutions'
       ]
     },
+    skills: {
+      title: 'Skills',
+      groups: [
+        { label: 'Core', skills: ['C++'] },
+        { label: 'Web', skills: ['HTML/CSS', 'JavaScript', 'REST APIs'] },
+        { label: 'Data', skills: ['SQL'] },
+        { label: 'Workflow', skills: ['Git'] }
+      ]
+    },
+    
     experience: {
       title: 'Experience',
       items: [
@@ -161,10 +150,10 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           period: 'Seasonal',
           location: 'Oulu',
           summary: [
-            'Supported customers and ensured smooth daily operations at the clubhouse.',
-            'Worked with booking and point-of-sale systems while coordinating day-to-day tasks.'
+            'Worked on daily golf course maintenance (greens, fairways, bunkers, and surrounding areas).',
+            'Operated and maintained tools and equipment, ensuring the course remained clean and playable.'
           ],
-          technologies: ['Customer service', 'Booking systems', 'Teamwork']
+          technologies: ['Course maintenance', 'Upkeep', 'Teamwork']          
         },
         {
           role: 'Mover / Relocation Worker',
@@ -172,10 +161,10 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           period: 'Trainee',
           location: 'Oulu',
           summary: [
-            'Contributed to hands-on production and logistics tasks with a focus on quality.',
-            'Learned how to streamline workflows and collaborate effectively in a team.'
+            'Worked as a mover: loading/unloading, carrying, packing, and protecting items during transport.',
+            'Assembled and disassembled furniture, followed safety procedures, and worked to tight schedules at customer sites.'
           ],
-          technologies: ['Processes', 'Quality', 'Teamwork']
+          technologies: ['Relocation', 'Furniture assembly', 'Safety', 'Teamwork']          
         },
         {
           role: 'Golf Course Maintenance Worker',
@@ -183,60 +172,16 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
           period: 'Seasonal',
           location: 'Kalajoki',
           summary: [
-            'Handled customer service and daily operations in a fast-paced seasonal setting.',
-            'Supported event and competition arrangements during peak periods.'
+            'Supported seasonal golf course upkeep and ensured the course stayed in great condition.',
+            'Assisted with day-to-day maintenance tasks and provided extra support during events and competitions.'
           ],
-          technologies: ['Customer service', 'Events', 'Collaboration']
+          technologies: ['Course maintenance', 'Upkeep', 'Collaboration']          
         }
       ]
     },
     projects: {
       title: 'Projects',
-      items: [
-        {
-          name: 'Aurora Dashboard',
-          description: 'Real-time KPI dashboard for a technology startup.',
-          stack: ['JavaScript', 'HTML/CSS', 'REST APIs'],
-          links: [
-            { label: 'Case study', href: '#' },
-            { label: 'GitHub', href: '#' }
-          ],
-          featured: true
-        },
-        {
-          name: 'Nordic Notes',
-          description: 'Minimal note-taking platform with robust syncing.',
-          stack: ['JavaScript', 'SQL', 'REST APIs'],
-          links: [{ label: 'Live', href: '#' }]
-        },
-        {
-          name: 'Signal Brand Site',
-          description: 'Brand site where motion guides the narrative.',
-          stack: ['HTML/CSS', 'JavaScript', 'Git'],
-          links: [{ label: 'Live', href: '#' }]
-        }
-      ]
-    },
-    skills: {
-      title: 'Skills',
-      groups: [
-        {
-          label: 'Core',
-          skills: ['C++']
-        },
-        {
-          label: 'Web',
-          skills: ['HTML/CSS', 'JavaScript', 'REST APIs']
-        },
-        {
-          label: 'Data',
-          skills: ['SQL']
-        },
-        {
-          label: 'Workflow',
-          skills: ['Git']
-        }
-      ]
+      items: []
     },
     contact: {
       title: 'Contact',

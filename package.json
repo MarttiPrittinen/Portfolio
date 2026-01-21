@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev apps/portfolio --port 3000",
+    "dev": "next dev portfolio/apps/portfolio --port 3000",
     "build": "next build apps/portfolio",
     "start": "next start apps/portfolio",
     "lint": "next lint",
