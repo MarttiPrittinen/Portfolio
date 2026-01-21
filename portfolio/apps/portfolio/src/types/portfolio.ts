@@ -18,7 +18,6 @@ export type About = {
   title: string
   lead: string
   paragraphs: string[]
-  highlights: string[]
 }
 
 export type ExperienceItem = {

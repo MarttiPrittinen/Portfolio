@@ -34,7 +34,7 @@ export function Experience({ title, items }: ExperienceProps) {
     >
       <div className="mx-auto max-w-6xl">
         <motion.div variants={item}>
-          <p className="text-xs uppercase tracking-[0.3em] text-zinc-400">{title}</p>
+          <p className="text-ms uppercase tracking-[0.3em] text-zinc-400">{title}</p>
         </motion.div>
         <div className="mt-10 space-y-10 border-l border-white/10 pl-6">
           {items.map((job, index) => (

@@ -17,12 +17,6 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
         'Minua kiinnostavat erityisesti ohjelmistojen taustalogiikka, web-sovellusten toteutus sekä tekoälyyn liittyvät ratkaisut. Opintojen ohella rakennan projekteja, joissa keskityn selkeisiin kokonaisuuksiin, toimivaan rakenteeseen ja helposti ylläpidettävään koodiin.',
         'Haen roolia, jossa pääsen oppimaan lisää käytännön kehitystyöstä, työskentelemään osana tiimiä ja soveltamaan osaamistani oikeisiin projekteihin. Arvostan ympäristöä, jossa tekeminen on huolellista ja jatkuva kehittyminen on luonteva osa työtä.'
       ],
-      highlights: [
-        'C++-ohjelmointi ja ongelmanratkaisu',
-        'Web-kehitys (HTML, CSS, JavaScript)',
-        'SQL-tietokannat ja REST-rajapinnat',
-        'Kiinnostus tekoälyyn ja dataan'
-      ]
     },    
     experience: {
       title: 'Kokemus',
@@ -124,12 +118,6 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
         'I am particularly interested in backend logic, web application development, and AI-related solutions. Alongside my studies, I build projects that focus on clear structure, solid functionality, and maintainable code.',
         'I am looking for a role where I can continue learning through real development work, collaborate as part of a team, and apply my skills to real-world projects. I value careful engineering and environments that support continuous improvement.'
       ],
-      highlights: [
-        'C++ programming and problem solving',
-        'Web development (HTML, CSS, JavaScript)',
-        'SQL databases and REST APIs',
-        'Interest in AI and data-driven solutions'
-      ]
     },
     skills: {
       title: 'Skills',

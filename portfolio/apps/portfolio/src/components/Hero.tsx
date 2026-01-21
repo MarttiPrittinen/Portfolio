@@ -27,15 +27,11 @@ export function Hero({ content }: HeroProps) {
   return (
     <motion.section
       id="top"
-      className="relative overflow-hidden px-6 pb-20 pt-24 md:pb-28 md:pt-28"
+      className="relative px-6 pb-20 pt-24 md:pb-28 md:pt-28"
       variants={container}
       initial="hidden"
       animate="show"
     >
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute -left-20 top-10 h-64 w-64 rounded-full bg-cyan-500/10 blur-3xl" />
-        <div className="absolute right-0 top-28 h-72 w-72 rounded-full bg-slate-400/10 blur-[120px]" />
-      </div>
       <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center md:justify-between">
         <div className="flex max-w-2xl flex-col gap-10">
           <motion.div variants={item}>
@@ -69,15 +65,16 @@ export function Hero({ content }: HeroProps) {
           </motion.div>
         </div>
         <motion.div variants={item} className="flex justify-center md:justify-end">
-          <div className="relative w-48 aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-white/5 shadow-xl shadow-cyan-500/10 md:w-56">
+        <div className="relative h-64 w-64 overflow-hidden rounded-full">
             <Image
-              src="/uploads/CVKUVA_atc_990f8988.jpg"
+              src="/uploads/IMG_1904.JPG"
               alt="Portrait of Martti Prittinen"
-              width={224}
-              height={224}
-              className="h-full w-full object-cover object-[center_20%]"
-              priority
+             
+               fill className="object-cover object-[50%_45%] brightness-95"     
             />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+
+            
           </div>
         </motion.div>
       </div>

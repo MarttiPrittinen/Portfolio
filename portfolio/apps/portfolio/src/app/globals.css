@@ -22,3 +22,78 @@ body {
 .font-heading {
   font-family: var(--font-heading), ui-sans-serif, system-ui, sans-serif;
 }
+
+/* Reunojen vignette (koko sivu, ei häiritse) */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 40;
+  box-shadow: inset 0 0 160px rgba(0, 0, 0, 0.55);
+}
+
+/* (Valinnainen) yhteinen pikkurotsikko-tyyli kuten TAUSTAA/KOKEMUS */
+@layer components {
+  .section-label {
+    @apply text-sm uppercase tracking-[0.27em] text-zinc-400;
+  }
+}
+.bg-pulse {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 9999px;
+  filter: blur(34px); /* yhtenäisempi pallo */
+  opacity: 0;
+  will-change: transform, opacity;
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+
+/* Vasen yläreuna */
+.pulse-1 {
+  left: 6%;
+  top: 12%;
+  background: radial-gradient(
+    circle,
+    rgba(56,189,248,0.90) 0%,
+    rgba(56,189,248,0.45) 40%,
+    rgba(56,189,248,0.0) 70%
+  );
+  animation: pulse-1 18s ease-in-out infinite;
+}
+
+/* Oikea alareuna – HIMMEÄMPI */
+.pulse-2 {
+  right: 6%;
+  bottom: 10%;
+  width: 280px;
+  height: 280px;
+  filter: blur(30px);
+
+  background: radial-gradient(
+    circle,
+    rgba(99,102,241,0.55) 0%,
+    rgba(99,102,241,0.25) 40%,
+    rgba(99,102,241,0.0) 70%
+  );
+  animation: pulse-2 22s ease-in-out infinite;
+  animation-delay: 3s; /* ei synkkaa ykkösen kanssa */
+}
+
+/* 2s cooldown sisällä (18s -> ~11% = 2s) */
+@keyframes pulse-1 {
+  0%, 11%   { opacity: 0; transform: scale(0.92); }
+  45%       { opacity: 0.42; transform: scale(1.15); }
+  70%       { opacity: 0.16; transform: scale(1.04); }
+  89%, 100% { opacity: 0; transform: scale(0.92); }
+}
+
+/* 2s cooldown sisällä (22s -> ~9% = 2s) */
+@keyframes pulse-2 {
+  0%, 9%    { opacity: 0; transform: scale(0.94); }
+  48%       { opacity: 0.28; transform: scale(1.18); } /* hillitympi */
+  72%       { opacity: 0.12; transform: scale(1.05); }
+  91%, 100% { opacity: 0; transform: scale(0.94); }
+}

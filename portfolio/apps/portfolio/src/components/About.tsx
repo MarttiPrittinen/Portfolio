@@ -1,6 +1,6 @@
 'use client'
 
-import type { About as AboutContent, Locale } from '@/types/portfolio'
+import type { About as AboutContent } from '@/types/portfolio'
 import { motion } from 'framer-motion'
 
 const container = {
@@ -19,14 +19,10 @@ const item = {
 
 type AboutProps = {
   content: AboutContent
-  locale: Locale
 }
 
-export function About({ content, locale }: AboutProps) {
-  if (!content) {
-    return null
-  }
-  const highlightLabel = locale === 'fi' ? 'Nostot' : 'Highlights'
+export function About({ content }: AboutProps) {
+  if (!content) return null
 
   return (
     <motion.section
@@ -37,32 +33,25 @@ export function About({ content, locale }: AboutProps) {
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
     >
-      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.2fr_1fr]">
-        <motion.div variants={item}>
-          <p className="text-xs uppercase tracking-[0.3em] text-zinc-400">{content.title}</p>
-          <h2 className="font-heading mt-4 text-3xl text-zinc-100 md:text-4xl">
-            {content.lead}
-          </h2>
-          <div className="mt-6 space-y-4 text-sm text-zinc-400 md:text-base">
-            {content.paragraphs.map((paragraph, index) => (
-              <p key={index}>{paragraph}</p>
-            ))}
-          </div>
-        </motion.div>
-        <motion.div
-          variants={item}
-          className="rounded-3xl border border-white/10 bg-white/5 p-8"
-        >
-          <p className="text-xs uppercase tracking-[0.3em] text-zinc-400">{highlightLabel}</p>
-          <ul className="mt-6 space-y-4 text-sm text-zinc-200">
-            {content.highlights.map((highlight, index) => (
-              <li key={index} className="flex items-start gap-3">
-                <span className="mt-1 h-2 w-2 rounded-full bg-cyan-400" />
-                <span>{highlight}</span>
-              </li>
-            ))}
-          </ul>
-        </motion.div>
+      
+      <div className="mx-auto max-w-6xl">
+        <div className="md:max-w-3xl">
+          <motion.div variants={item}>
+            <p className="text-ms uppercase tracking-[0.27em] text-zinc-400">
+              {content.title}
+            </p>
+
+            <h2 className="font-heading mt-4 text-3xl text-zinc-100 md:text-4xl">
+              {content.lead}
+            </h2>
+
+            <div className="mt-6 space-y-4 text-sm text-zinc-400 md:text-base">
+              {content.paragraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+            </div>
+          </motion.div>
+        </div>
       </div>
     </motion.section>
   )

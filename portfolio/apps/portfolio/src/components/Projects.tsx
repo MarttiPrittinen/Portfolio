@@ -108,7 +108,7 @@ export function Projects({ title, items, locale }: ProjectsProps) {
     >
       <div className="mx-auto max-w-6xl">
         <motion.div variants={item}>
-          <p className="text-xs uppercase tracking-[0.3em] text-zinc-400">{title}</p>
+          <p className="text-ms uppercase tracking-[0.3em] text-zinc-400">{title}</p>
         </motion.div>
         {status === 'loading' ? (
           <motion.p variants={item} className="mt-6 text-sm text-zinc-400">

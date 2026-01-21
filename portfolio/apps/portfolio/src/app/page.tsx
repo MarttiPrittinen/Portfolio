@@ -17,21 +17,15 @@ export default function Home() {
   const content = portfolioContent[locale]
 
   return (
-    <main className="relative overflow-hidden bg-slate-950">
-      <div className="pointer-events-none absolute inset-0 -z-10">
-        <div className="absolute left-1/2 top-0 h-[420px] w-[520px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-[160px]" />
-        <div className="absolute bottom-0 right-0 h-[380px] w-[380px] rounded-full bg-slate-400/10 blur-[140px]" />
-      </div>
+    // overflow-hidden pois -> ei “pallo”/blur leikkausvilahdusta
+    // jos haluat estää vaakascrollin, käytä overflow-x-hidden
+    <main className="relative overflow-x-hidden">
       <Navbar locale={locale} onLocaleChange={setLocale} name={content.hero.name} />
       <Hero content={content.hero} />
-      <About content={portfolioContent[locale].about} locale={locale} />
+      <About content={content.about} />
       <Experience title={content.experience.title} items={content.experience.items} />
-      <Projects
-        title={content.projects.title}
-        items={content.projects.items}
-        locale={locale}
-      />
-      <Skills />
+      <Projects title={content.projects.title} items={content.projects.items} locale={locale} />
+      <Skills locale={locale} />
       <Contact locale={locale} content={content.contact} socialLinks={content.footer.links} />
       <Footer content={content.footer} />
     </main>

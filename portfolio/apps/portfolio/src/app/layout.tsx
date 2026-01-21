@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, Spectral } from 'next/font/google'
 import { Providers } from '@/components/Providers'
+import { BackgroundPulse } from '@/components/BackgroundPulse'
 import './globals.css'
 
 const heading = Space_Grotesk({
@@ -54,9 +55,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`dark scroll-smooth ${heading.variable} ${body.variable}`}>
-      <body className="min-h-screen bg-slate-950 text-zinc-100">
-        <Providers>{children}</Providers>
+      <body className="relative isolate min-h-screen bg-slate-950 text-zinc-100 overflow-x-hidden">
+      <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
+  <div className="bg-pulse pulse-1" />
+  <div className="bg-pulse pulse-2" />
+</div>
+
+
+        <div className="relative z-10">
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   )
 }
+
