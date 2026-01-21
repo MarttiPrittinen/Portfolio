@@ -42,8 +42,6 @@ const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
 const iconMap: Record<string, typeof Github> = {
   GitHub: Github,
   LinkedIn: Linkedin,
-  CV: FileText,
-  Resume: FileText,
   Email: Mail
 }
 

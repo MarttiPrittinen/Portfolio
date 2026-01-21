@@ -98,7 +98,6 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
       links: [
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/martti-prittinen-404a95336/' },
         { label: 'GitHub', href: 'https://github.com/MarttiPrittinen' },
-        { label: 'CV', href: '#' }
       ]
     }
   },
@@ -188,7 +187,6 @@ export const portfolioContent: Record<'fi' | 'en', PortfolioContent> = {
       links: [
         { label: 'LinkedIn', href: 'https://www.linkedin.com/in/martti-prittinen-404a95336/' },
         { label: 'GitHub', href: 'https://github.com/MarttiPrittinen' },
-        { label: 'Resume', href: '#' }
       ]
     }
   }

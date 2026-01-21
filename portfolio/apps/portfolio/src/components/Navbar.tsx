@@ -9,7 +9,7 @@ const navItems = [
   { id: 'experience', label: { fi: 'Kokemus', en: 'Experience' } },
   { id: 'projects', label: { fi: 'Projektit', en: 'Projects' } },
   { id: 'skills', label: { fi: 'Taidot', en: 'Skills' } },
-  { id: 'contact', label: { fi: 'Yhteys', en: 'Contact' } }
+  { id: 'contact', label: { fi: 'Ota yhteyttä', en: 'Contact' } }
 ]
 
 type NavbarProps = {
