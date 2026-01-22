@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev portfolio/apps/portfolio --port 3000",
-    "build": "next build",
-    "start": "next start apps/portfolio",
-    "lint": "next lint",
-    "deploy": "npx @opennextjs/cloudflare"
-  },
+  "dev": "next dev --port 3000",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
+},
+
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.0",
     "@tailwindcss/postcss": "^4.1.18",
