@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Space_Grotesk, Spectral } from 'next/font/google'
 import { Providers } from '@/components/Providers'
-import { BackgroundPulse } from '@/components/BackgroundPulse'
 import './globals.css'
 
 const heading = Space_Grotesk({
