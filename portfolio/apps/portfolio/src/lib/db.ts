@@ -10,11 +10,14 @@
  * database_id = "your-database-id"
  */
 
-import { getRequestContext } from '@cloudflare/next-on-pages'
-
-interface CloudflareEnv {
-  DB?: D1Database
+export interface CloudflareEnv {
+  DB?: D1Database;
 }
+
+export function getDb() {
+  return null;
+}
+
 
 /**
  * Get D1 database from Cloudflare context
