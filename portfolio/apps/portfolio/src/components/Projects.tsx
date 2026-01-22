@@ -102,7 +102,7 @@ export function Projects({ title, items, locale }: ProjectsProps) {
     <motion.section
       id="projects"
       className="scroll-mt-24 px-6 py-20"
-      variants={container}
+    
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.2 }}

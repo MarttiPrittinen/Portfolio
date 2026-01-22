@@ -30,13 +30,13 @@ export function Hero({ content }: HeroProps) {
     <motion.section
       id="top"
       className="relative px-6 pb-20 pt-24 md:pb-28 md:pt-28"
-      variants={container}
+      
       initial="hidden"
       animate="show"
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-10 md:flex-row md:items-center md:justify-between">
         <div className="flex max-w-2xl flex-col gap-10">
-          <motion.div variants={item}>
+          <motion.div >
             <p className="text-xs uppercase tracking-[0.3em] text-zinc-400">
               {content.location}
             </p>
@@ -50,7 +50,7 @@ export function Hero({ content }: HeroProps) {
               {content.subtitle}
             </p>
           </motion.div>
-          <motion.div variants={item} className="flex flex-wrap gap-4">
+          <motion.div  className="flex flex-wrap gap-4">
             <a
               href={content.ctaPrimary.href}
               className="group inline-flex items-center gap-2 rounded-full bg-zinc-100 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-white"
@@ -66,7 +66,7 @@ export function Hero({ content }: HeroProps) {
             </a>
           </motion.div>
         </div>
-        <motion.div variants={item} className="flex justify-center md:justify-end">
+        <motion.div  className="flex justify-center md:justify-end">
         <div className="relative h-64 w-64 overflow-hidden rounded-full">
             <Image
               src="/uploads/IMG_1904.JPG"

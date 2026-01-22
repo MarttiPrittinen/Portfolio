@@ -29,7 +29,7 @@ export function About({ content }: AboutProps) {
     <motion.section
       id="about"
       className="scroll-mt-24 px-6 py-20"
-      variants={container}
+      
       initial="hidden"
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
