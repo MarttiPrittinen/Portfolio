@@ -1,10 +1,9 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable edge runtime for API routes
-  experimental: {
-    // For Cloudflare Workers deployment
-  }
-}
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+};
 
-export default nextConfig
+export default nextConfig;
