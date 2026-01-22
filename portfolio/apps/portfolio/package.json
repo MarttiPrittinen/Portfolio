@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev portfolio/apps/portfolio --port 3000",
-    "build": "next build portfolio/apps/portfolio",
-    "start": "next start portfolio/apps/portfolio",
-    "lint": "next lint portfolio/apps/portfolio"
+  "dev": "next dev -p 3000",
+  "build": "next build",
+  "start": "next start",
+  "lint": "next lint"
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.0",
