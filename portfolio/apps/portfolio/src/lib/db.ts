@@ -11,13 +11,12 @@
  */
 
 export interface CloudflareEnv {
-  DB?: D1Database;
+  DB?: any;
 }
 
 export function getDb() {
   return null;
 }
-
 
 /**
  * Get D1 database from Cloudflare context
