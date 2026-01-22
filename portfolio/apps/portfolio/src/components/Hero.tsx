@@ -10,13 +10,15 @@ const container = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: 'easeOut', staggerChildren: 0.12 }
+    transition: { duration: 0.7, ease: [0, 0, 0.2, 1], staggerChildren: 0.12 }
+
   }
 }
 
 const item = {
   hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0, 0, 0.2, 1] } }
+
 }
 
 type HeroProps = {

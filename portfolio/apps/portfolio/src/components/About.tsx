@@ -8,7 +8,8 @@ const container = {
   show: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: 'easeOut', staggerChildren: 0.12 }
+    transition: { duration: 0.6, ease: [0, 0, 0.2, 1], staggerChildren: 0.12 }
+
   }
 }
 
@@ -33,7 +34,7 @@ export function About({ content }: AboutProps) {
       whileInView="show"
       viewport={{ once: true, amount: 0.3 }}
     >
-      
+
       <div className="mx-auto max-w-6xl">
         <div className="md:max-w-3xl">
           <motion.div variants={item}>
